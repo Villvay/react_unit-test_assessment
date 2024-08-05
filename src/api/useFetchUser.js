@@ -46,10 +46,11 @@ export const useFetchUser = (userId) => {
             }
         };
 
-        if (userId) {
+        if (Boolean(userId)) {
             fetchUser();
         } else {
             setUser(null);
+            setError(null);
         }
     }, [userId]);
 
